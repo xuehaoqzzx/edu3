@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p>aa</p>
+<button id="btn" onclick="btnClicked()">按钮</button>
+<p id="ptime"></p>
+<script>
+    //document.write("宽度:"+window.innerWidth+",高度:"+window.innerHeight+"顶高:"+document.body.offsetHeight);
+    var mytime=setInterval(function(){
+        getTime();
+    },1000);
+    function getTime(){
+        var d =new Date();
+        var t= d.toLocaleTimeString();
+        document.getElementById("ptime").innerHTML=t;
+    }
+    function btnClicked(){
+        clearInterval(mytime);
+    }
+</script>
+</body>
+</html>

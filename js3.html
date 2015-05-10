@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="timetext"></div>
+<script>
+    /*people = new Object();
+    people.name="imew";
+    people.age="30";
+    document.write("name:"+people.name+",age:"+people.age);
+    people={name:"iewn",age:30};
+    document.write("name:"+people.name+",age:"+people.age);
+
+    function people(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    son=new people("iwen",30);
+    document.write("name:"+son.name+",age:"+son.age);*/
+
+    var str="hello world";
+
+//    document.write("字符串长度为:"+str.length);
+//    document.write(str.indexOf("llo"));//查字符串首次出现的位置。
+//    document.write(str.match('world'));
+//    document.write(str.replace("world","xuehao"));
+//    document.write(str.toUpperCase());
+//    var str1="hello,world,xuehao,jike,xueyuan";
+//    var s=str1.split(",");
+//    document.write(s[4]);
+
+    var date=new Date();
+/*    document.write(date);
+    document.write(date.getFullYear());
+    document.write(date.getTime());
+    date.setFullYear(2010,1,1);
+    document.write(date);*/
+    //时钟
+/*
+    function startTime(){
+        var today= new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m=checkTime(m);
+        s=checkTime(s);
+        document.getElementById("timetext").innerHTML= h+":"+m+":"+s;
+        t= setTimeout(function(){
+            startTime();
+        },1000);
+
+    }
+
+    function checkTime(i){
+        if(i<10){
+            i = "0"+i;
+        }
+        return i;
+    }
+
+    startTime();
+    */
+    /*var a=["hello","world"];
+    var b=["iewn","ime"];
+    var c= a.concat(b);
+    document.write(c);
+    var a=["5","2","3","1","8","9"];
+    document.write(a.sort(function(a,b){
+        return b-a;
+    }));
+    var a=["c","a","b"];
+    document.write(a.reverse()); //数据反转
+    */
+    document.write(Math.round(1.9));
+
+
+
+</script>
+
+</body>
+</html>

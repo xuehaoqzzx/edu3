@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+<p name="pn">hellp</p>
+
+<a href="" title="得到Ａ标签的属性" id="aid">hello</a>
+<a href="" id="aid2">aid2</a>
+<ul><li></li><li></li><li></li><li></li><li></li></ul>
+<div id="div">
+    <p id="pid">div的p元素</p>
+</div>
+<script>
+    function getName(){
+        var count=document.getElementsByName("pn");
+//        alert(count.length);
+        var p=count[2];
+        p.innerHTML="World";
+
+    }
+
+    function getAttr(){
+        var anode=document.getElementById("aid");
+        var attr= anode.getAttribute("title");
+        alert(attr);
+    }
+    function setAttr(){
+        var anode = document.getElementById("aid2");
+        anode.setAttribute("title","动态设置A的titl属性");
+        var attr=anode.getAttribute("title");
+        alert(attr);
+    }
+    function getChildNode(){
+        var childnode=document.getElementsByTagName("ul")[0].childNodes;
+//        alert(childnode.length);
+        alert(childnode[0].nodeType);
+    }
+
+    function getParentNode(){
+        var div=document.getElementById("pid");
+        alert(div.parentNode.nodeName);
+    }
+    function createNode(){
+        var body=document.body;
+        var input=document.createElement("input");
+        input.type="button";
+        input.value="测试";
+        body.appendChild(input);
+    }
+    function addNode(){
+        var div=document.getElementById("div");
+        var node=document.getElementById("pid");
+        var newnode=document.createElement("p");
+        newnode.innerHTML="动态添加第一个元素";
+        div.insertBefore(newnode,node);
+    }
+    function removeNode(){
+        var div=document.getElementById("div");
+        var p=div.removeChild(div.childNodes[1]);
+    }
+
+    function getSize(){
+        var width=document.body.offsetWidth||document.documentElement.offsetWidth;
+        var height=document.body.offsetHeight;
+        alert(width+"===="+height);
+    }
+
+    getSize();
+</script>
+</body>
+</html>

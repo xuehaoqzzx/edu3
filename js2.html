@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div id="div">
+    <button id="btn">按钮</button>
+
+
+<a href="http://www.163.com" id="aid">163</a>
+</div>
+<script>
+//    var x=document.getElementById('btn');
+//    x.addEventListener("click",demo1);
+//
+//    function demo1(){
+//        alert('demo1');
+//    }
+    document.getElementById("btn").addEventListener("click",showType);
+    document.getElementById("div").addEventListener("click",showDiv);
+    document.getElementById("aid").addEventListener("click",showA);
+
+
+    function showType(event){
+        alert(event.type);
+        alert(event.target);
+
+    }
+
+    function showDiv(){
+        alert('div');
+    }
+    function showA(event){
+//        event.stopPropagation();
+        event.preventDefault();
+    }
+</script>
+</body>
+</html>

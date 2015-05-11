@@ -1,13 +1,19 @@
 window.onload = function(){
     imgLocation("container","box");
-    //var imgData={"data":[{"src":"1.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"2.jpg"},{"src":"5.jpg"},{"src":"6.jpg"},{"src":"7.jpg"}]};
-    var imgData={"data":[{"src":"1.jpg"},{"src":"1.jpg"},{"src":"1.jpg"}]};
+    var imgData={"data":[{"src":"1.jpg"},{"src":"3.jpg"},{"src":"4.jpg"},{"src":"2.jpg"},{"src":"5.jpg"},{"src":"6.jpg"},{"src":"7.jpg"}]};
+    /*var imgData={
+        "data": [
+            {"src":"1.jpg"},
+            {"src":"2.jpg"},
+            {"src":"3.jpg"}
+        ]};
+    alert(imgData.data[1].src);*/
     window.onscroll = function(){
 
         if(checkFlag()){
             var cparent= document.getElementById("container");
-            alert(imgData.length);
-            for(var i=0;i<imgData.length;i++){
+
+            for(var i=0;i<imgData.data.length;i++){
                 var ccontent = document.createElement("div");
                 ccontent.className="box";
                 cparent.appendChild(ccontent);
@@ -19,6 +25,7 @@ window.onload = function(){
                 boximg.appendChild(img);
                 console.log(i);
             }
+            imgLocation("container","box");
         }
     }
 }
